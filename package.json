@@ -1,0 +1,16 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "bot para pegar as noticias do tab_news",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.0",
+    "nodemon": "^2.0.20",
+    "requestify": "^0.2.5"
+  }
+}
