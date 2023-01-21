@@ -66,5 +66,5 @@ client.on(Events.MessageCreate, (message) => {
 });
 
 client.login(
-  "MTA2NTA3Nzg3MjYxMzY3MDk2Mw.G6rIHl.OlSD4Xffp5gvirC1OmSijA98hPfGUXm9jufWrs"
+  "TOKEN"
 );
