@@ -19,6 +19,7 @@ client.once(Events.ClientReady, (c) => {
 client.on(Events.MessageCreate, (message) => {
   try {
     if (message.author.id != "bot id") {
+    if (message.author.id != "bot id") {
       if (message.content.startsWith("%delete")) {
         channel = client.channels.cache.get(message.channelId);
         const comando = message.content;
@@ -35,6 +36,7 @@ client.on(Events.MessageCreate, (message) => {
         message.channelId == "channelid" //i wanted the news to be sent in specifcic channel
       ) {
         const lista = [];
+        channel = client.channels.cache.get("channelid");
         channel = client.channels.cache.get("channelid");
         channel.messages.fetch({ limit: 50 }).then((msgs) => {
           msgs.forEach((element) => {
