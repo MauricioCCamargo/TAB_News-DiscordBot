@@ -18,7 +18,7 @@ client.once(Events.ClientReady, (c) => {
 
 client.on(Events.MessageCreate, (message) => {
   try {
-    if (message.author.id != "1065077872613670963") {
+    if (message.author.id != "bot id") {
       if (message.content.startsWith("%delete")) {
         channel = client.channels.cache.get(message.channelId);
         const comando = message.content;
@@ -32,10 +32,10 @@ client.on(Events.MessageCreate, (message) => {
         }
       } else if (
         message.content == "%tab_news" &&
-        channel.id == "1066148985837977640"
+        message.channelId == "channelid" //i wanted the news to be sent in specifcic channel
       ) {
         const lista = [];
-        channel = client.channels.cache.get("1066148985837977640");
+        channel = client.channels.cache.get("channelid");
         channel.messages.fetch({ limit: 50 }).then((msgs) => {
           msgs.forEach((element) => {
             lista.push(element.content);
@@ -65,6 +65,4 @@ client.on(Events.MessageCreate, (message) => {
   }
 });
 
-client.login(
-  "MTA2NTA3Nzg3MjYxMzY3MDk2Mw.G6rIHl.OlSD4Xffp5gvirC1OmSijA98hPfGUXm9jufWrs"
-);
+client.login("TOKEN");
